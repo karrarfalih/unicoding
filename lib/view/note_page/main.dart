@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:unicoding/model.dart';
+import 'package:unicoding/models/note/model.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:unicoding/model.dart';
+import 'package:unicoding/models/note/model.dart';
 import 'package:unicoding/view/home/card.dart';
 
 

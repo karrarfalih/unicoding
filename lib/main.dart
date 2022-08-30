@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:unicoding/view/home/home.dart';
 import 'package:get/get.dart';
+import 'package:unicoding/view/login/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xff08df78)
       ),
-      home: const HomePage(),
+      home: const LoginScreen(),
     );
   }
 }

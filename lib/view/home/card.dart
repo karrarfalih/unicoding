@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:unicoding/model.dart';
+import 'package:unicoding/models/note/model.dart';
 import 'package:get/get.dart';
 import 'package:unicoding/view/home/card_preview.dart';
 import 'package:unicoding/view/note_page/main.dart';
