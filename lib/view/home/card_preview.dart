@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 class CardPreview extends StatelessWidget {
   const CardPreview({Key? key}) : super(key: key);

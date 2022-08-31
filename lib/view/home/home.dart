@@ -21,6 +21,12 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController myController = TextEditingController();
 
   @override
+  void dispose() {
+    myController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

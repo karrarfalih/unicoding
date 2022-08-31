@@ -1,11 +1,13 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:unicoding/view/home/home.dart';
-import 'package:get/get.dart';
-import 'package:unicoding/view/login/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:unicoding/services/local_database/shared_preferences.dart';
+import 'package:get/get.dart' hide Response;
+import 'package:unicoding/view/wrapper/wrapper.dart';
 
-void main() {
+Future<void> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  Database.prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xff08df78)
       ),
-      home: const LoginScreen(),
+      home: const Wrapper(),
     );
   }
 }

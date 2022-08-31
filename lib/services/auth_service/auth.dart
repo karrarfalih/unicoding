@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:unicoding/models/account/model.dart';
 import 'package:get/get.dart' hide Response;
+import 'package:unicoding/services/local_database/shared_preferences.dart';
 import 'package:unicoding/view/home/home.dart';
 import 'package:unicoding/view/login/login.dart';
 
@@ -15,7 +16,6 @@ class AuthService{
     isBusy.value = true;
     FocusScope.of(Get.context!).unfocus();
     try{
-
       Response res = await Dio().post(
         'http://restapi.adequateshop.com/api/authaccount/login',
         data: jsonEncode({
@@ -32,6 +32,8 @@ class AuthService{
           email: data['Email'],
           token: data['Token']
       );
+      Database.prefs.setString('email', email);
+      Database.prefs.setString('password', password);
       Get.offAll(HomePage());
     }
     catch (e){
@@ -41,6 +43,8 @@ class AuthService{
   }
 
   static signOut(){
+    Database.prefs.remove('email');
+    Database.prefs.remove('password');
     Get.offAll(LoginScreen());
   }
 }

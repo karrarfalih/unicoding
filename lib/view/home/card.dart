@@ -24,7 +24,7 @@ class MyCard extends StatelessWidget {
         margin: const EdgeInsets.only(top: 10, right: 5, left: 5),
         padding: const EdgeInsets.only(top: 10, bottom: 20, left: 20),
         decoration: BoxDecoration(
-            color: note.color.value,
+            color: note.color,
             borderRadius: BorderRadius.circular(20)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
